@@ -249,3 +249,12 @@ def update_map(var_display, year, theme):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+from flask import Flask
+
+# Dash 已经自带一个 Flask 实例，我们只需要引用它：
+server = app.server  # 这行其实你原来就有
+
+# 只有当你在本地运行时才用 debug 模式
+if __name__ == "__main__":
+    app.run(debug=True)
